@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="8IiQ31nI5KE-1MnQ0vEb">
+    <mxGraphModel dx="833" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="elemento" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;ElementoSorteable&lt;/b&gt;&lt;hr&gt;+ obtenerRepresentacion(): String" vertex="1">
+          <mxGeometry height="90" width="300" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="participante" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Participante&lt;/b&gt;&lt;hr&gt;- nombre: String&lt;br&gt;- edad: int&lt;hr&gt;+ obtenerRepresentacion(): String" vertex="1">
+          <mxGeometry height="125" width="310" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="premio" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Premio&lt;/b&gt;&lt;hr&gt;- nombre: String&lt;br&gt;- valor: double&lt;hr&gt;+ obtenerRepresentacion(): String" vertex="1">
+          <mxGeometry height="125" width="310" x="430" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="entrada" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Entrada&lt;/b&gt;&lt;hr&gt;- evento: String&lt;br&gt;- numero: int&lt;hr&gt;+ obtenerRepresentacion(): String" vertex="1">
+          <mxGeometry height="125" width="310" x="820" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="urna" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=left;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Urna&amp;lt;T extends ElementoSorteable&amp;gt;&lt;br&gt;&lt;/b&gt;&lt;hr&gt;- elementos: List&amp;lt;T&amp;gt;&lt;hr&gt;+ agregar(elemento: T): void&lt;br&gt;+ extraer(): T&lt;br&gt;+ cantidad(): int&lt;br&gt;+ estaVacia(): boolean" vertex="1">
+          <mxGeometry height="175" width="350" x="400" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="herencia1" edge="1" parent="1" source="participante" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#000000;" target="elemento" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="175" />
+              <mxPoint x="550" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="herencia2" edge="1" parent="1" source="premio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#000000;" target="elemento" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="herencia3" edge="1" parent="1" source="entrada" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#000000;" target="elemento" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="975" y="175" />
+              <mxPoint x="550" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asociacion" edge="1" parent="1" source="urna" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;strokeColor=#000000;" target="elemento" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="575" y="400" />
+              <mxPoint x="550" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="multiplicidadUrna" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry height="20" width="45" x="575" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="multiplicidadElemento" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;" value="0..*" vertex="1">
+          <mxGeometry height="20" width="45" x="605" y="440" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
